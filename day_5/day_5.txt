@@ -1,0 +1,240 @@
+def total(a,b):
+    result=a+b
+    print('The sum is',result)
+def diff(a,b):
+    result2=a-b
+    print('The difference is',result2)
+def prod(a,b):
+    result3=a*b
+    print('The product is',result3)
+def div(a,b):
+    result4=a/b
+    print('The division is',result4)
+a=int(input('Enter the value of a '))
+b=int(input('Enter the value of b '))
+total(a,b)
+diff(a,b)
+prod(a,b)
+div(a,b)
+
+Enter the value of a 20
+Enter the value of b 10
+The sum is 30
+The difference is 10
+The product is 200
+The division is 2.0
+
+
+def vj(money):  #money-actul parameter
+    print('Give vijay the sum of',money)
+mon=50
+vj(mon)   #mon-formal parameter
+
+def vj(money):
+    print('Give vijay the sum of',money)
+vj(50)
+
+def vj(money):
+    print('Give vijay the sum of',money)
+vj(5*50)
+
+def vj(money):
+    print('Give vijay the sum of',money)
+vj(50/5)
+
+Give vijay the sum of 50
+Give vijay the sum of 50
+Give vijay the sum of 250
+Give vijay the sum of 10.0
+
+var='vijay'
+def show():
+    global var1
+    var1='tall'
+    print('in function var cis',var)
+show()
+print('outside function',var1)
+print('var is ',var)
+
+in function var cis vijay
+outside function tall
+var is  vijay
+
+
+def outf():#2
+    var=10#3
+    def innf():#5
+        var=20#6
+        print('inner var',var)#7
+    innf()#4
+    print('outer',var)#8
+outf()#1
+
+
+inner var 20
+outer 10
+
+
+write a program with the user defined function which returns an integer value to the colon
+
+def cube(x):
+    return(x*x*x)
+num=10
+result=cube(num)
+print('output of the evalution is',result)
+
+output of the evalution is 1000
+
+write a program to add 6 user defined numbers and return the value to the main program
+testcae1-8,6,4,2,10,0
+
+def total():
+    return(a+b+c+d+e+f)
+a=8
+b=6
+c=4
+d=2
+e=10
+f=0
+result=total()
+print('output of the evalution is',result)
+
+def total():
+    return(g)
+a=8
+b=6
+c=4
+d=2
+e=10
+f=0
+g=a+b+c+d+e+f
+result=total()
+print('output of the evalution is',result)
+
+def total():
+    return(g)
+a=int(input('enter the value of a:'))
+b=int(input('enter the value of b:'))
+c=int(input('enter the value of c:'))
+d=int(input('enter the value of d:'))
+e=int(input('enter the value of e:'))
+f=int(input('enter the value of f:'))
+g=a+b+c+d+e+f
+result=total()
+print('output of the evalution is',result)
+
+output of the evalution is 30
+output of the evalution is 30
+output of the evalution is 30
+enter the value of a:8
+enter the value of b:6
+enter the value of c:4
+enter the value of d:2
+enter the value of e:10
+enter the value of f:0
+output of the evalution is 30
+
+display function
+
+def display(name,age):
+    print('name',name)
+    print('age',age)
+n='vj'
+y=77
+display(name=n,age=y)
+
+name vj
+age 77
+
+write a program to print the fibonacci series using recurssion by functions till 7 terms.
+
+def fib(n):
+    if n<2:
+        return 1
+    return(fib(n-1)+fib(n-2))
+n= int(input())
+for i in range(n):
+    print('fibonacci (',i,')',fib(i))
+
+n=7
+fibonacci ( 0 ) 1
+fibonacci ( 1 ) 1
+fibonacci ( 2 ) 2
+fibonacci ( 3 ) 3
+fibonacci ( 4 ) 5
+fibonacci ( 5 ) 8
+fibonacci ( 6 ) 13
+
+
+from time import*
+t1=perf_counter()
+i=sum=0
+while i<10000:
+    sum+=1
+    i+=1
+sleep(0)
+t2=perf_counter()
+print("execution time=%f seconds"%(t2-t1))
+
+execution time=0.004085 seconds
+
+def hanoi(n,a,b,c):
+    if n>0:
+        hanoi(n-1,a,c,b)
+        if a:
+            c.append(a.pop())
+        hanoi(n-1,b,a,c)
+a=[1,2,3,4]
+b=[]
+c=[]
+print("before puzzle")
+print(a,b,c)
+hanoi(len(a),a,b,c)
+print("after puzzle")
+print(a,b,c)
+
+before puzzle
+[1, 2, 3, 4] [] []
+after puzzle
+[] [] [1, 2, 3, 4]
+
+
+from datetime import*
+d=date.today()
+print(d)
+d=date(2023,2,3)
+for x in range(1,10):
+    nextdate=d+timedelta(days=x)
+    print(nextdate)
+
+2023-02-03
+2023-02-04
+2023-02-05
+2023-02-06
+2023-02-07
+2023-02-08
+2023-02-09
+2023-02-10
+2023-02-11
+2023-02-12
+
+#krishna murthy number
+def fact(n):
+    if n==1:
+        return n
+    else:
+        return n*fact(n-1)
+sum,temp=0,0
+n=int(input())
+temp=n
+while n!=0:
+    r=n%10
+    sum=sum+fact(r)
+    n=n//10
+if sum==temp:
+    print('yes it is strong number')
+else:
+    print('no it is not a strong number')
+
+145
+yes it is strong number

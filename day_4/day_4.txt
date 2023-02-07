@@ -1,0 +1,237 @@
+#0,0,6,7,14,12,21,
+term=int(input("enter the term:"))
+if term%2==0:
+    term=term//2
+    print(6*(term-1))
+else:
+    term=term//2+1
+    print(7*(term-1))
+    
+enter the term:8
+18
+
+
+val=int(input("enter the number:"))
+x=0
+y=0
+for i in range(1,val+1):
+    if(i%2!=0):
+        x=x+7
+    else:
+        y=y+6
+if(val%2!=0):
+    print('{} term in the program is {}'.format(val,x-7))
+else:
+    print('{} term in the program is {}'.format(val,y-6))
+
+enter the number:7
+7 term in the program is 21
+
+stings
+anagram    god-dog
+tom riddles anagram    harry potter-try hero part
+
+#concatebation of a string
+str1="india"
+str2=" bharat"
+print(str1+str2)
+
+india bharat
+
+str1="india "
+str2=input("enter a name:")
+str1+= str2
+print(str1)
+
+enter a name:jai hind
+india jai hind
+
+#repetition
+str1="india "
+print(str1*10)  
+
+india india india india india india india india india india 
+
+text="india"
+index=0
+for i in text:
+    print("text[",index,"]=",i)
+    index+=1
+
+text[ 0 ]= i
+text[ 1 ]= n
+text[ 2 ]= d
+text[ 3 ]= i
+text[ 4 ]= a
+
+text='india is great'
+print(text.upper())
+
+INDIA IS GREAT
+
+text='India Is Great'
+print(text.lower())
+
+india is great
+
+text='india is great'
+print(text.title())
+
+India Is Great
+
+text='India Is Great'
+print(text.swapcase())
+
+iNDIA iS gREAT
+
+text='india is great'
+print(text.split())
+
+['india', 'is', 'great']
+
+print('-'.join(['India','Is','Great']))
+
+India-Is-Great
+
+str1='donkey monkey'
+print(list(enumerate(str1)))
+
+[(0, 'd'), (1, 'o'), (2, 'n'), (3, 'k'), (4, 'e'), (5, 'y'), (6, ' '), (7, 'm'), (8, 'o'), (9, 'n'), (10, 'k'), (11, 'e'), (12, 'y')]
+
+
+#slicing program
+str1='indian'
+print(str1[1])
+
+n
+
+str1='indian'
+print(str1[1:5])
+
+ndia
+
+import string
+print(type(string.digits))
+print(type(string.ascii_letters))
+print(string.digits)
+'''print(string.find(string.lowercase,'g')!=-1)
+print('g' in string.lowercase)'''
+ch='g'
+print('a'<=ch<='z')
+print(dir(str))
+str1='hello'
+print(dir(str1))
+<class 'str'>
+<class 'str'>
+0123456789
+True
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+import re
+str1='she sells sea shells at sea shore'
+p1='sells'
+if re.match(p1,str1):
+    print('match found')
+else:
+    print(p1,' not present in string')
+
+sells  not present in string
+
+import re
+str1='she sells sea shells at sea shore'
+p1='she sells sea shells at sea shore'
+if re.match(p1,str1):
+    print('match found')
+else:
+    print(p1,' not present in string')
+
+match found
+
+import re
+str1='she sells sea shells at sea shore'
+p1='sells'
+if re.search(p1,str1):
+    print('match found')
+else:
+    print(p1,' not present in string')
+
+match found
+
+#replace in re
+import re
+str1='she sells sea shells at sea shore'
+p1='sea'
+rep='ocean'
+ns=re.sub(p1,rep,str1,1)
+print(ns)
+
+she sells ocean shells at sea shore
+
+import re
+p="[aeiou]"
+hh=input("enter the name:")
+if re.search(p,hh):
+    print("matchy vowel")
+else:
+    print("there is no vowel")
+
+enter the name:vinay
+matchy vowel
+
+write a program to check whether the given input is satisfying the condition of anagram
+test case1 input s1-listen s2-silent o/p true
+testcase2 s1-race s2-acer o/p true
+
+m=len(str2)
+sortstr1=sorted(str1)
+sortstr2=sorted(str2)
+if n==m:
+    if sortstr1==sortstr2:
+        print("anagram")
+    else:
+        print("not an anagram")
+else:
+    print("not equal")
+    
+anagram
+    
+from collections import Counter
+def check(str1,str2):
+    if(Counter(str1)==Counter(str2)):
+        print('true')
+    else:
+        ('false')
+str1='listen'
+str2='silent'
+check(str1,str2)
+
+true
+
+#0,0,2,1,4,2,6,3,8,4
+term=int(input("enter the term:"))
+if term%2==0:
+    term=term//2
+    print(term-1)
+else:
+    term=term//2
+    print(2*term)
+
+enter the term:15
+14
+
+   
+n=int(input('enter the number:'))
+a=b=0
+for i in range(1,n+1):
+    if(i%2!=0):
+        a=a+2
+    else:
+        b=b+1
+if(n%2!=0):
+    print('{}'.format(a-2))
+else:
+        print('{}'.format(b-1))
+
+enter the number:57
+56

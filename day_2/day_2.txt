@@ -1,0 +1,408 @@
+a,b,c=10,20,30
+print(a,b,c,sep=',')
+
+print('16','b','44',sep='-')
+
+10,20,30
+16-b-44
+
+apple=100
+banana=200
+pineapple=300
+print(apple,end=' ')
+print(banana,end=' ')
+print(pineapple)
+
+print(apple,banana,pineapple)
+
+100 200 300
+100 200 300
+
+split 
+the function helps in getting multiple inputs from user along with white spaces.
+
+x,y,z=input("Enter a three values:").split(' ')
+print("Total number of students:",x)
+print("Number of boys is:",y)
+print("Number of girls is:",z)
+
+Enter a three values:100 200 300
+Total number of students: 100
+Total number of students: 200
+Total number of students: 300
+
+x,y,z=input("Enter a three values:").split('*')
+print("Total number of students:",x)
+print("Number of boys is:",y)
+print("Number of girls is:",z)
+
+Enter a three values:100 200*300 400*500 600
+Total number of students: 100 200
+Total number of students: 300 400
+Total number of students: 500 600
+
+x,y,z=input("Enter a three values:").split('0')
+print("Total number of students:",x)
+print("Number of boys is:",y)
+print("Number of girls is:",z)
+
+Enter a three values:100
+Total number of students: 1
+Number of boys is: 
+Number of girls is: 
+
+email="vinay@gmail.com"
+pwd=12345678
+cemail=input("Enter the email:")
+cpwd=int(input("Enter the pwd:"))
+if(email==cemail and pwd==cpwd):
+    print("Login Succesful")
+else:
+    print("Login Failed")
+
+Enter the email:vinay@gmail.com
+Enter the pwd:12345678
+Login Succesful
+
+
+a=5
+b=5.0
+if(a==b):
+    print("yes")
+else:
+    print("no")
+
+yes
+
+a=5
+b=True
+if(1==b):
+    print("yes")
+else:
+    print("no")
+
+yes
+
+a=5
+b=True
+if(0==b):
+    print("yes")
+else:
+    print("no")
+
+no
+
+x=int(input("Enter x value:"))
+if(x%7==0):
+    print("Divisible")
+else:
+    print("Not Divisible")
+
+Enter x value:9
+Not Divisible
+
+
+email="vinay@gmail.com"
+pwd=12345678
+cemail=input("Enter the email:")
+cpwd=int(input("Enter the pwd:"))
+if(email==cemail and pwd==cpwd):
+    print("Login Succesful")
+elif(email!=cemail and pwd==cpwd):
+    print("Login failed due to mail")
+elif(email==cemail and pwd!=cpwd):
+    print("Login failed due to pwd")
+elif(email!=cemail and pwd!=cpwd):
+    print("Login failed due to mail and pwd")
+
+Enter the email:vinay
+Enter the pwd:1234567
+Login failed due to mail and pwd
+
+
+email="vinay@gmail.com"
+pwd=12345678
+otp=5678
+cemail=input("Enter the email:")
+cpwd=int(input("Enter the pwd:"))
+if(email==cemail and pwd==cpwd):
+    cotp=int(input("Enter the otp:"))
+    if(otp==cotp):
+        print("Order placed Succesfully")
+    else:
+        print("Order Failed")
+elif(email!=cemail and pwd==cpwd):
+    print("Login failed due to mail")
+elif(email==cemail and pwd!=cpwd):
+    print("Login failed due to pwd")
+elif(email!=cemail and pwd!=cpwd):
+    print("Login failed due to mail and pwd")
+
+Enter the email:vinay@gmail.com
+Enter the pwd:12345678
+Enter the otp:5678
+Order placed Succesfully
+
+a='vinay'
+print("d" in a)
+
+False
+
+for i in range(1,10):
+    print(i,end=' ')
+
+1 2 3 4 5 6 7 8 9 
+
+for i in range(1,10,2):
+    print(i,end=' ')
+
+1 3 5 7 9 
+
+for i in range(10,0,-1):
+    print(i,end=' ')
+
+10 9 8 7 6 5 4 3 2 1 
+
+for i in range(65,91):
+    if i!=65 and i!=69 and i!=73 and i!=79 and i!=85:
+        print(chr(i),end=' ')
+
+B C D F G H J K L M N P Q R S T V W X Y Z 
+
+for i in range(65,91):
+    if i==65 or i==69 or i==73 or i==79 or i==85:
+        print(chr(i),end=' ')
+
+A E I O U
+
+days=int(input("day:"))
+if days<=84:
+    calls=int(input("calls:"))
+    msgs=int(input("msgs:"))
+    data=float(input("data:"))
+    print("reamaining days are",3000-calls) if calls<=3000 else print("kindly top up")
+    print("remaining msgs are",100-msgs) if msgs<=100 else print("msg failed")
+    print("remaining data is",float(2.0)-data) if data<=2.0 else print("you exceeded your limit.Speed is reduced")
+else:
+    print("your plan expired")
+
+day:15
+calls:255
+msgs:95
+data:1.7
+reamaining days are 2745
+remaining msgs are 5
+remaining data is 0.30000000000000004
+
+
+each and every time your outer for itertion is initialized
+
+each and every time your inner for itertion is reinitialized
+
+for i in range(1,30):
+    if(i%2==1 and i<=5):
+        print (i)
+
+1
+3
+5
+        
+for i in range(1,6,2):
+    print (i*5)
+    
+5
+15
+25
+
+for i in range(1,6):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print("\n")
+* 
+
+* * 
+
+* * * 
+
+* * * * 
+
+* * * * * 
+
+    
+for i in range(1,6):
+    for j in range(1,i+1):
+        print(i,end=" ")
+    print("\n")
+    
+1 
+
+2 2 
+
+3 3 3 
+
+4 4 4 4 
+
+5 5 5 5 5
+
+    
+for i in range(1,6):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print("\n")
+
+1 
+
+1 2 
+
+1 2 3 
+
+1 2 3 4 
+
+1 2 3 4 5 
+
+for i in range(97,123):
+    for j in range(97,i+1):
+        print(chr(i),end=" ")
+    print("\n")
+
+a 
+
+b b 
+
+c c c 
+
+d d d d 
+
+e e e e e 
+
+f f f f f f 
+
+g g g g g g g 
+
+h h h h h h h h 
+
+i i i i i i i i i 
+
+j j j j j j j j j j 
+
+k k k k k k k k k k k 
+
+l l l l l l l l l l l l 
+
+m m m m m m m m m m m m m 
+
+n n n n n n n n n n n n n n 
+
+o o o o o o o o o o o o o o o 
+
+p p p p p p p p p p p p p p p p 
+
+q q q q q q q q q q q q q q q q q 
+
+r r r r r r r r r r r r r r r r r r 
+
+s s s s s s s s s s s s s s s s s s s 
+
+t t t t t t t t t t t t t t t t t t t t 
+
+u u u u u u u u u u u u u u u u u u u u u 
+
+v v v v v v v v v v v v v v v v v v v v v v 
+
+w w w w w w w w w w w w w w w w w w w w w w w 
+
+x x x x x x x x x x x x x x x x x x x x x x x x 
+
+y y y y y y y y y y y y y y y y y y y y y y y y y 
+
+z z z z z z z z z z z z z z z z z z z z z z z z z z
+
+
+    
+for i in range(97,123,2):
+    for j in range(97,i+1,2):
+        print(chr(i),end=" ")
+    print("\n")
+
+
+a 
+
+c c 
+
+e e e 
+
+g g g g 
+
+i i i i i 
+
+k k k k k k 
+
+m m m m m m m 
+
+o o o o o o o o 
+
+q q q q q q q q q 
+
+s s s s s s s s s s 
+
+u u u u u u u u u u u 
+
+w w w w w w w w w w w w 
+
+y y y y y y y y y y y y y 
+
+
+for i in range(1,11):
+    print(i,"*10 =",i*10)
+
+
+1 *10 = 10
+2 *10 = 20
+3 *10 = 30
+4 *10 = 40
+5 *10 = 50
+6 *10 = 60
+7 *10 = 70
+8 *10 = 80
+9 *10 = 90
+10 *10 = 100
+
+
+
+"""a=1
+while(a==10):
+    print(a,"* 5 =",a*5)
+a+1
+
+i=1
+while i<=5:
+    j=1
+    while j<=i:
+        print(i,end=" ")
+        j=j+1
+    print("\n")
+    i=i-1"""
+
+
+age=[10,30,-50,60,200,105,1000,305,11,22]
+for i in range(len(age)):
+    if age[i]%10==0:
+        print(age[i])
+
+
+10
+30
+-50
+60
+200
+1000
+
+        
+l=[10,20,50,105,11]
+for i in range(len(l)):
+    if 0 in str(l(i)):
+        print(l[i])
+
+
+
+
